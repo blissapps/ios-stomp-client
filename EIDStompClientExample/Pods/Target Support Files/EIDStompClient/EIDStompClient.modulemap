@@ -1,0 +1,6 @@
+framework module EIDStompClient {
+  umbrella header "EIDStompClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

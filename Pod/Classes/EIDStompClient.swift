@@ -1,5 +1,5 @@
 //
-//  AKStompClient.swift
+//  EIDStompClient.swift
 //
 //  Created by Alexander Köhn
 //
@@ -47,29 +47,29 @@ struct StompCommands {
     static let responseFrameError = "ERROR"
 }
 
-public enum AKStompAckMode {
+public enum EIDStompAckMode {
     case autoMode
     case clientMode
 }
 
-public protocol AKStompClientDelegate {
+public protocol EIDStompClientDelegate {
     
-    func stompClient(_ client: AKStompClient!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, withHeader header:[String:String]?, withDestination destination: String)
+    func stompClient(_ client: EIDStompClient!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, withHeader header:[String:String]?, withDestination destination: String)
     
-    func stompClientDidDisconnect(_ client: AKStompClient!)
-    func stompClientWillDisconnect(_ client: AKStompClient!, withError error: NSError)
-    func stompClientDidConnect(_ client: AKStompClient!)
-    func serverDidSendReceipt(_ client: AKStompClient!, withReceiptId receiptId: String)
-    func serverDidSendError(_ client: AKStompClient!, withErrorMessage description: String, detailedErrorMessage message: String?)
+    func stompClientDidDisconnect(_ client: EIDStompClient!)
+    func stompClientWillDisconnect(_ client: EIDStompClient!, withError error: NSError)
+    func stompClientDidConnect(_ client: EIDStompClient!)
+    func serverDidSendReceipt(_ client: EIDStompClient!, withReceiptId receiptId: String)
+    func serverDidSendError(_ client: EIDStompClient!, withErrorMessage description: String, detailedErrorMessage message: String?)
     func serverDidSendPing()
 }
 
-open class AKStompClient: NSObject, SRWebSocketDelegate {
+open class EIDStompClient: NSObject, SRWebSocketDelegate {
 
 
     public var socket: SRWebSocket?
     var sessionId: String?
-    var delegate: AKStompClientDelegate?
+    var delegate: EIDStompClientDelegate?
     var connectionHeaders: [String: String]?
     open var certificateCheckEnabled = true
     var maxWebSocketFrameSize = 12000
@@ -88,14 +88,14 @@ open class AKStompClient: NSObject, SRWebSocketDelegate {
         }
     }
     
-    open func openSocketWithURLRequest(_ request: URLRequest, delegate: AKStompClientDelegate) {
+    open func openSocketWithURLRequest(_ request: URLRequest, delegate: EIDStompClientDelegate) {
         self.delegate = delegate
         self.urlRequest = request
         
         openSocket()
     }
     
-    open func openSocketWithURLRequest(_ request: URLRequest, delegate: AKStompClientDelegate, connectionHeaders: [String: String]?) {
+    open func openSocketWithURLRequest(_ request: URLRequest, delegate: EIDStompClientDelegate, connectionHeaders: [String: String]?) {
         self.connectionHeaders = connectionHeaders
         openSocketWithURLRequest(request, delegate: delegate)
     }
@@ -219,7 +219,7 @@ open class AKStompClient: NSObject, SRWebSocketDelegate {
                 frameString += "\n"
                 frameString += body
             } else if let _ = body as? Data {
-                //ak, 20151015: do we need to implemenet this?
+                //EID, 20151015: do we need to implemenet this?
             }
             
             if body == nil {
@@ -369,10 +369,10 @@ open class AKStompClient: NSObject, SRWebSocketDelegate {
         subscribeToDestination(destination, withAck: .autoMode)
     }
     
-    open func subscribeToDestination(_ destination: String, withAck ackMode: AKStompAckMode) {
+    open func subscribeToDestination(_ destination: String, withAck ackMode: EIDStompAckMode) {
         var ack = ""
         switch ackMode {
-        case AKStompAckMode.clientMode:
+        case EIDStompAckMode.clientMode:
             ack = StompCommands.ackClient
             break
         default:

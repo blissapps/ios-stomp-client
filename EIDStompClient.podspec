@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.summary      = "StompClient based on AKStompClient and updated to Swift 3.0+."
 
-  s.homepage     = "https://github.com/adrianAlvarezFernandez/CameraResolutionHelper/blob/master/README.md"
+  s.homepage     = "https://gitlab.com/eid-sdk.code/ios-stomp-client"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 

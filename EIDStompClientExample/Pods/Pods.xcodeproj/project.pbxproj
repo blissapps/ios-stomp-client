@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04B38FE56AB710C8ACAFA0E3C146D5E3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */; };
+		06B774E3D2785D8A73B86D9D79B27F75 /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13CE1F14781490B352191336760B6740 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */; };
+		27ED37A29D3456DAEC1C6C496C8106F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		43964919466FF75F26FADE3EBCC3E82B /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */; };
+		53D1E3FADBFE1619D228B513634D9F84 /* EIDStompClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E30EA5D460A3391E63EF560738157147 /* EIDStompClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54E800BC9F6B52AE7EB5DB0813057C0A /* EIDStompClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39B51FA1E21F77551478B46AF12D2 /* EIDStompClient-dummy.m */; };
+		6405602DA3F09C12C9154BF857E855C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		733DE5D96D14C28E076BECAC8DF0803A /* Pods-EIDStompClientExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B172952408F09E962371EE65CBF0292F /* Pods-EIDStompClientExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7350279188AB78F7087D00394C38D046 /* Pods-EIDStompClientExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EA1957F21E2C09B01EEEBAA73CBB6 /* Pods-EIDStompClientExample-dummy.m */; };
+		9D177C05426E38F4C771F24F78A0275C /* AKStompClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB09B091C8E7C13F21006FD12C1AFE5 /* AKStompClient.swift */; };
+		A4B39CA0B6351F8FBAE2F66CE57BAB90 /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9CAD52C1721E5961148D6C5BE2880D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		CA87F16D277950FE19E22A618F244A94 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */; };
+		E1AD9A03DC93A36479C6A1559D889863 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */; };
+		F9C27F4F22776666A5B0FFE93B7CCE03 /* SocketRocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E98734E763C580EF5045C8144FE6CF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 620305A10A69903B13AEAA480A8A5FA0;
+			remoteInfo = SocketRocket;
+		};
+		C475CE7670ED31436111B7E56241E003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5399EEB4D3A1D8093CA9FD3498D9BEA;
+			remoteInfo = EIDStompClient;
+		};
+		CCFA539D30133EA1F28745FF74B71D1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 620305A10A69903B13AEAA480A8A5FA0;
+			remoteInfo = SocketRocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0823D6F53E71990AFCA43025697BC66C /* Pods_EIDStompClientExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EIDStompClientExample.framework; path = "Pods-EIDStompClientExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
+		093137DADD3BBEA71734648C5FB52B77 /* EIDStompClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EIDStompClient-prefix.pch"; sourceTree = "<group>"; };
+		14440F2FED661278CF76B4ECC5ADC5DA /* EIDStompClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EIDStompClient.modulemap; sourceTree = "<group>"; };
+		37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketRocket.h; path = SocketRocket/SocketRocket.h; sourceTree = "<group>"; };
+		463974CEA815BBA7E898A930ABC3F934 /* Pods-EIDStompClientExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EIDStompClientExample-resources.sh"; sourceTree = "<group>"; };
+		4B25B68109E2B8C5B35F0A73504F1705 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SocketRocket.modulemap; sourceTree = "<group>"; };
+		538737BED43BD8F031C86732CC75CB81 /* SocketRocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-prefix.pch"; sourceTree = "<group>"; };
+		5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-umbrella.h"; sourceTree = "<group>"; };
+		71E68E4CF4DB17258E446BBB1B946C66 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketRocket.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78EFC6FB9D93497D6EC0FD5E40FB5F96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocketRocket-dummy.m"; sourceTree = "<group>"; };
+		81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8BB09B091C8E7C13F21006FD12C1AFE5 /* AKStompClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AKStompClient.swift; sourceTree = "<group>"; };
+		8DB39B51FA1E21F77551478B46AF12D2 /* EIDStompClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EIDStompClient-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94DCAFA5725F005985A5651846FDCB4E /* Pods-EIDStompClientExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EIDStompClientExample.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		9A1EA1957F21E2C09B01EEEBAA73CBB6 /* Pods-EIDStompClientExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EIDStompClientExample-dummy.m"; sourceTree = "<group>"; };
+		9A25DBC89AF686EA479664DE920B7BC8 /* Pods-EIDStompClientExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EIDStompClientExample-frameworks.sh"; sourceTree = "<group>"; };
+		9A33F57D14BABB8E67F58C0FCF2D7CF8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
+		B172952408F09E962371EE65CBF0292F /* Pods-EIDStompClientExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EIDStompClientExample-umbrella.h"; sourceTree = "<group>"; };
+		B35D16093371501C4353F536F6AAC97B /* Pods-EIDStompClientExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EIDStompClientExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		BCC35963A3C475CFD63164827699936D /* Pods-EIDStompClientExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EIDStompClientExample.modulemap"; sourceTree = "<group>"; };
+		BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
+		C3DAD22F28BB9233032ED44FCB8C9609 /* Pods-EIDStompClientExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EIDStompClientExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6F28DA88520B13FDC4B446F1431BB89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8B2FE0525670AA15E6135EA7256075 /* Pods-EIDStompClientExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EIDStompClientExample.release.xcconfig"; sourceTree = "<group>"; };
+		E30EA5D460A3391E63EF560738157147 /* EIDStompClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EIDStompClient-umbrella.h"; sourceTree = "<group>"; };
+		F30BD4548946EFEAFB59B7BFDA54735E /* EIDStompClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EIDStompClient.framework; path = EIDStompClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCD813A5F791293F9DD524754F1DF74 /* EIDStompClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EIDStompClient.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18A2DC648F7C5C91209F40CB5A26FD4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27ED37A29D3456DAEC1C6C496C8106F0 /* Foundation.framework in Frameworks */,
+				CA87F16D277950FE19E22A618F244A94 /* SocketRocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7F708E54298F6108ABE9E507B58AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B38FE56AB710C8ACAFA0E3C146D5E3 /* CFNetwork.framework in Frameworks */,
+				6405602DA3F09C12C9154BF857E855C5 /* Foundation.framework in Frameworks */,
+				13CE1F14781490B352191336760B6740 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB9398B33B1528A3DC1BC427043D3870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB9CAD52C1721E5961148D6C5BE2880D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02D2552DC9395B109BB5672FAD6709DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14440F2FED661278CF76B4ECC5ADC5DA /* EIDStompClient.modulemap */,
+				FDCD813A5F791293F9DD524754F1DF74 /* EIDStompClient.xcconfig */,
+				8DB39B51FA1E21F77551478B46AF12D2 /* EIDStompClient-dummy.m */,
+				093137DADD3BBEA71734648C5FB52B77 /* EIDStompClient-prefix.pch */,
+				E30EA5D460A3391E63EF560738157147 /* EIDStompClient-umbrella.h */,
+				D6F28DA88520B13FDC4B446F1431BB89 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "EIDStompClientExample/Pods/Target Support Files/EIDStompClient";
+			sourceTree = "<group>";
+		};
+		0BCEBE9D38D6453FC1223B72B412E5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */,
+				888B4F781E1372B03D0269A2918E530A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F6A6DB9739FB2BF10CAFF305C6FF2B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F30BD4548946EFEAFB59B7BFDA54735E /* EIDStompClient.framework */,
+				0823D6F53E71990AFCA43025697BC66C /* Pods_EIDStompClientExample.framework */,
+				71E68E4CF4DB17258E446BBB1B946C66 /* SocketRocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FF663BB937700D1580BDAB7F3EF0D97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DC3187DB7279173E5C52E8BE8D2FEB1 /* SocketRocket */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		58568D630B39E76CA642F3332E1A45D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A33F57D14BABB8E67F58C0FCF2D7CF8 /* Info.plist */,
+				4B25B68109E2B8C5B35F0A73504F1705 /* SocketRocket.modulemap */,
+				9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */,
+				7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */,
+				538737BED43BD8F031C86732CC75CB81 /* SocketRocket-prefix.pch */,
+				6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SocketRocket";
+			sourceTree = "<group>";
+		};
+		5BD17C35E623BAD0F854D522D680A988 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BEEC50C58CF6C9D6D26B10057C671F5 /* EIDStompClient */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5BEEC50C58CF6C9D6D26B10057C671F5 /* EIDStompClient */ = {
+			isa = PBXGroup;
+			children = (
+				E7A3AEBFCCBF96623DA2ED64F464690D /* Pod */,
+				02D2552DC9395B109BB5672FAD6709DE /* Support Files */,
+			);
+			name = EIDStompClient;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				5BD17C35E623BAD0F854D522D680A988 /* Development Pods */,
+				0BCEBE9D38D6453FC1223B72B412E5B2 /* Frameworks */,
+				4FF663BB937700D1580BDAB7F3EF0D97 /* Pods */,
+				4F6A6DB9739FB2BF10CAFF305C6FF2B1 /* Products */,
+				A27E3044C3DCB0160C846457BDA89863 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		888B4F781E1372B03D0269A2918E530A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */,
+				8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */,
+				9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8DC3187DB7279173E5C52E8BE8D2FEB1 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */,
+				BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */,
+				0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */,
+				58568D630B39E76CA642F3332E1A45D5 /* Support Files */,
+			);
+			name = SocketRocket;
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		A27E3044C3DCB0160C846457BDA89863 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7D66EB359E609251D45E23495C01450 /* Pods-EIDStompClientExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A7D66EB359E609251D45E23495C01450 /* Pods-EIDStompClientExample */ = {
+			isa = PBXGroup;
+			children = (
+				78EFC6FB9D93497D6EC0FD5E40FB5F96 /* Info.plist */,
+				BCC35963A3C475CFD63164827699936D /* Pods-EIDStompClientExample.modulemap */,
+				C3DAD22F28BB9233032ED44FCB8C9609 /* Pods-EIDStompClientExample-acknowledgements.markdown */,
+				B35D16093371501C4353F536F6AAC97B /* Pods-EIDStompClientExample-acknowledgements.plist */,
+				9A1EA1957F21E2C09B01EEEBAA73CBB6 /* Pods-EIDStompClientExample-dummy.m */,
+				9A25DBC89AF686EA479664DE920B7BC8 /* Pods-EIDStompClientExample-frameworks.sh */,
+				463974CEA815BBA7E898A930ABC3F934 /* Pods-EIDStompClientExample-resources.sh */,
+				B172952408F09E962371EE65CBF0292F /* Pods-EIDStompClientExample-umbrella.h */,
+				94DCAFA5725F005985A5651846FDCB4E /* Pods-EIDStompClientExample.debug.xcconfig */,
+				DA8B2FE0525670AA15E6135EA7256075 /* Pods-EIDStompClientExample.release.xcconfig */,
+			);
+			name = "Pods-EIDStompClientExample";
+			path = "Target Support Files/Pods-EIDStompClientExample";
+			sourceTree = "<group>";
+		};
+		E7A3AEBFCCBF96623DA2ED64F464690D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F4C4ACF22615ED07A5129021A74E26E6 /* Classes */,
+			);
+			name = Pod;
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		F4C4ACF22615ED07A5129021A74E26E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8BB09B091C8E7C13F21006FD12C1AFE5 /* AKStompClient.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C00B393E5F75CF75083C8B50E0E7F9C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733DE5D96D14C28E076BECAC8DF0803A /* Pods-EIDStompClientExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24D36484B9CCE26C91A44EB4EB3DEDF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D1E3FADBFE1619D228B513634D9F84 /* EIDStompClient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2D79FDCAAD965DBD9F562915BA3F939 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B39CA0B6351F8FBAE2F66CE57BAB90 /* SocketRocket-umbrella.h in Headers */,
+				F9C27F4F22776666A5B0FFE93B7CCE03 /* SocketRocket.h in Headers */,
+				06B774E3D2785D8A73B86D9D79B27F75 /* SRWebSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4776F30846E6AD6FC76EE8CFD5BD92D9 /* Pods-EIDStompClientExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CD7BDBA4C7923BCE5ECD154769B6103 /* Build configuration list for PBXNativeTarget "Pods-EIDStompClientExample" */;
+			buildPhases = (
+				07F09EB3B6461D0748AEE4AA495E01EB /* Sources */,
+				BB9398B33B1528A3DC1BC427043D3870 /* Frameworks */,
+				C00B393E5F75CF75083C8B50E0E7F9C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC8B18A461E59502A73C9D20A6409699 /* PBXTargetDependency */,
+				8E5F19039768B9B2F2BC64AF1BAFA093 /* PBXTargetDependency */,
+			);
+			name = "Pods-EIDStompClientExample";
+			productName = "Pods-EIDStompClientExample";
+			productReference = 0823D6F53E71990AFCA43025697BC66C /* Pods_EIDStompClientExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		620305A10A69903B13AEAA480A8A5FA0 /* SocketRocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40ADDF842DE24ECE2E475A80C8C6DF5 /* Build configuration list for PBXNativeTarget "SocketRocket" */;
+			buildPhases = (
+				9668544F7F2BC06270661DCE0C38CDD9 /* Sources */,
+				26E7F708E54298F6108ABE9E507B58AC /* Frameworks */,
+				E2D79FDCAAD965DBD9F562915BA3F939 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketRocket;
+			productName = SocketRocket;
+			productReference = 71E68E4CF4DB17258E446BBB1B946C66 /* SocketRocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5399EEB4D3A1D8093CA9FD3498D9BEA /* EIDStompClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0F735061E2E7C56BF029AD9EED4004C /* Build configuration list for PBXNativeTarget "EIDStompClient" */;
+			buildPhases = (
+				70319BFBBC75ACEA823CE5EDA40CE791 /* Sources */,
+				18A2DC648F7C5C91209F40CB5A26FD4B /* Frameworks */,
+				C24D36484B9CCE26C91A44EB4EB3DEDF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EAA6EACD6FEC501E3325E4017BF2522 /* PBXTargetDependency */,
+			);
+			name = EIDStompClient;
+			productName = EIDStompClient;
+			productReference = F30BD4548946EFEAFB59B7BFDA54735E /* EIDStompClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4F6A6DB9739FB2BF10CAFF305C6FF2B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5399EEB4D3A1D8093CA9FD3498D9BEA /* EIDStompClient */,
+				4776F30846E6AD6FC76EE8CFD5BD92D9 /* Pods-EIDStompClientExample */,
+				620305A10A69903B13AEAA480A8A5FA0 /* SocketRocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07F09EB3B6461D0748AEE4AA495E01EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7350279188AB78F7087D00394C38D046 /* Pods-EIDStompClientExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70319BFBBC75ACEA823CE5EDA40CE791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D177C05426E38F4C771F24F78A0275C /* AKStompClient.swift in Sources */,
+				54E800BC9F6B52AE7EB5DB0813057C0A /* EIDStompClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9668544F7F2BC06270661DCE0C38CDD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43964919466FF75F26FADE3EBCC3E82B /* SocketRocket-dummy.m in Sources */,
+				E1AD9A03DC93A36479C6A1559D889863 /* SRWebSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EAA6EACD6FEC501E3325E4017BF2522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 620305A10A69903B13AEAA480A8A5FA0 /* SocketRocket */;
+			targetProxy = CCFA539D30133EA1F28745FF74B71D1B /* PBXContainerItemProxy */;
+		};
+		8E5F19039768B9B2F2BC64AF1BAFA093 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 620305A10A69903B13AEAA480A8A5FA0 /* SocketRocket */;
+			targetProxy = 8E98734E763C580EF5045C8144FE6CF8 /* PBXContainerItemProxy */;
+		};
+		AC8B18A461E59502A73C9D20A6409699 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EIDStompClient;
+			target = E5399EEB4D3A1D8093CA9FD3498D9BEA /* EIDStompClient */;
+			targetProxy = C475CE7670ED31436111B7E56241E003 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29B58FCE8493CBDA044F270DE7AF6682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8B2FE0525670AA15E6135EA7256075 /* Pods-EIDStompClientExample.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EIDStompClientExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EIDStompClientExample/Pods-EIDStompClientExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EIDStompClientExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4C7033185708BC300BC177233FFC2A5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDCD813A5F791293F9DD524754F1DF74 /* EIDStompClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EIDStompClient/EIDStompClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EIDStompClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EIDStompClient/EIDStompClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EIDStompClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		54B8FD6AD4CBA3FE1862F6A091F7D919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDCD813A5F791293F9DD524754F1DF74 /* EIDStompClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EIDStompClient/EIDStompClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EIDStompClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EIDStompClient/EIDStompClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EIDStompClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9011065A3C26D679E8FB5C21E9132AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94DCAFA5725F005985A5651846FDCB4E /* Pods-EIDStompClientExample.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-EIDStompClientExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EIDStompClientExample/Pods-EIDStompClientExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EIDStompClientExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A608DD073C17BF54FCFAE45FB90D90A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA466E65CDAE8F20929AA704A3AC041D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CD7BDBA4C7923BCE5ECD154769B6103 /* Build configuration list for PBXNativeTarget "Pods-EIDStompClientExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9011065A3C26D679E8FB5C21E9132AB1 /* Debug */,
+				29B58FCE8493CBDA044F270DE7AF6682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40ADDF842DE24ECE2E475A80C8C6DF5 /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA466E65CDAE8F20929AA704A3AC041D /* Debug */,
+				A608DD073C17BF54FCFAE45FB90D90A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0F735061E2E7C56BF029AD9EED4004C /* Build configuration list for PBXNativeTarget "EIDStompClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B8FD6AD4CBA3FE1862F6A091F7D919 /* Debug */,
+				4C7033185708BC300BC177233FFC2A5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

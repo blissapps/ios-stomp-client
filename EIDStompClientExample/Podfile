@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+platform :ios, '9.0'
+
+target 'EIDStompClientExample' do
+
+  pod "EIDStompClient", :path => "../"
+
+end
