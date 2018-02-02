@@ -8,11 +8,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.summary      = "StompClient based on AKStompClient and updated to Swift 3.0+."
 
-  s.homepage     = "https://gitlab.com/eid-sdk.code/ios-stomp-client"
+  s.homepage     = "https://gitlab.com/eid-sdk/ios-stomp-client"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
 
-  s.source       = { :git => "https://gitlab.com/eid-sdk.code/ios-stomp-client.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://gitlab.com/eid-sdk/ios-stomp-client.git", :tag => "#{s.version}" }
 
   s.source_files  = "Pod/Classes/**/*.{swift}"
 
