@@ -13,15 +13,15 @@
 		27ED37A29D3456DAEC1C6C496C8106F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
 		43964919466FF75F26FADE3EBCC3E82B /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */; };
 		53D1E3FADBFE1619D228B513634D9F84 /* EIDStompClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E30EA5D460A3391E63EF560738157147 /* EIDStompClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54E800BC9F6B52AE7EB5DB0813057C0A /* EIDStompClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39B51FA1E21F77551478B46AF12D2 /* EIDStompClient-dummy.m */; };
 		6405602DA3F09C12C9154BF857E855C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
 		733DE5D96D14C28E076BECAC8DF0803A /* Pods-EIDStompClientExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B172952408F09E962371EE65CBF0292F /* Pods-EIDStompClientExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7350279188AB78F7087D00394C38D046 /* Pods-EIDStompClientExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1EA1957F21E2C09B01EEEBAA73CBB6 /* Pods-EIDStompClientExample-dummy.m */; };
-		9D177C05426E38F4C771F24F78A0275C /* AKStompClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB09B091C8E7C13F21006FD12C1AFE5 /* AKStompClient.swift */; };
 		A4B39CA0B6351F8FBAE2F66CE57BAB90 /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9CAD52C1721E5961148D6C5BE2880D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
 		CA87F16D277950FE19E22A618F244A94 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */; };
 		E1AD9A03DC93A36479C6A1559D889863 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */; };
+		F1389357CB19C714E14EEE45A3BA7A87 /* EIDStompClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB39B51FA1E21F77551478B46AF12D2 /* EIDStompClient-dummy.m */; };
+		F3F13987821C423AC86236B3562ED589 /* AKStompClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB36090F709F878037C55C85178C97D /* AKStompClient.swift */; };
 		F9C27F4F22776666A5B0FFE93B7CCE03 /* SocketRocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -50,24 +50,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0823D6F53E71990AFCA43025697BC66C /* Pods_EIDStompClientExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EIDStompClientExample.framework; path = "Pods-EIDStompClientExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0823D6F53E71990AFCA43025697BC66C /* Pods_EIDStompClientExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EIDStompClientExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
 		093137DADD3BBEA71734648C5FB52B77 /* EIDStompClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EIDStompClient-prefix.pch"; sourceTree = "<group>"; };
-		14440F2FED661278CF76B4ECC5ADC5DA /* EIDStompClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EIDStompClient.modulemap; sourceTree = "<group>"; };
+		14440F2FED661278CF76B4ECC5ADC5DA /* EIDStompClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EIDStompClient.modulemap; sourceTree = "<group>"; };
+		2EB36090F709F878037C55C85178C97D /* AKStompClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AKStompClient.swift; sourceTree = "<group>"; };
 		37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketRocket.h; path = SocketRocket/SocketRocket.h; sourceTree = "<group>"; };
 		463974CEA815BBA7E898A930ABC3F934 /* Pods-EIDStompClientExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EIDStompClientExample-resources.sh"; sourceTree = "<group>"; };
-		4B25B68109E2B8C5B35F0A73504F1705 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SocketRocket.modulemap; sourceTree = "<group>"; };
+		4B25B68109E2B8C5B35F0A73504F1705 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SocketRocket.modulemap; sourceTree = "<group>"; };
 		538737BED43BD8F031C86732CC75CB81 /* SocketRocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-prefix.pch"; sourceTree = "<group>"; };
 		5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-umbrella.h"; sourceTree = "<group>"; };
-		71E68E4CF4DB17258E446BBB1B946C66 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketRocket.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E68E4CF4DB17258E446BBB1B946C66 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EFC6FB9D93497D6EC0FD5E40FB5F96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocketRocket-dummy.m"; sourceTree = "<group>"; };
 		81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8BB09B091C8E7C13F21006FD12C1AFE5 /* AKStompClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AKStompClient.swift; sourceTree = "<group>"; };
 		8DB39B51FA1E21F77551478B46AF12D2 /* EIDStompClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EIDStompClient-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94DCAFA5725F005985A5651846FDCB4E /* Pods-EIDStompClientExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EIDStompClientExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		9A1EA1957F21E2C09B01EEEBAA73CBB6 /* Pods-EIDStompClientExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EIDStompClientExample-dummy.m"; sourceTree = "<group>"; };
@@ -76,13 +76,13 @@
 		9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
 		B172952408F09E962371EE65CBF0292F /* Pods-EIDStompClientExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EIDStompClientExample-umbrella.h"; sourceTree = "<group>"; };
 		B35D16093371501C4353F536F6AAC97B /* Pods-EIDStompClientExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EIDStompClientExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		BCC35963A3C475CFD63164827699936D /* Pods-EIDStompClientExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EIDStompClientExample.modulemap"; sourceTree = "<group>"; };
+		BCC35963A3C475CFD63164827699936D /* Pods-EIDStompClientExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EIDStompClientExample.modulemap"; sourceTree = "<group>"; };
 		BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
 		C3DAD22F28BB9233032ED44FCB8C9609 /* Pods-EIDStompClientExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EIDStompClientExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D6F28DA88520B13FDC4B446F1431BB89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA8B2FE0525670AA15E6135EA7256075 /* Pods-EIDStompClientExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EIDStompClientExample.release.xcconfig"; sourceTree = "<group>"; };
 		E30EA5D460A3391E63EF560738157147 /* EIDStompClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EIDStompClient-umbrella.h"; sourceTree = "<group>"; };
-		F30BD4548946EFEAFB59B7BFDA54735E /* EIDStompClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EIDStompClient.framework; path = EIDStompClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30BD4548946EFEAFB59B7BFDA54735E /* EIDStompClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EIDStompClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCD813A5F791293F9DD524754F1DF74 /* EIDStompClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EIDStompClient.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,8 +220,15 @@
 				0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */,
 				58568D630B39E76CA642F3332E1A45D5 /* Support Files */,
 			);
-			name = SocketRocket;
 			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		98FDBD1EA1E1037DF6FE43404E8E7BAE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2EB36090F709F878037C55C85178C97D /* AKStompClient.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A27E3044C3DCB0160C846457BDA89863 /* Targets Support Files */ = {
@@ -253,19 +260,9 @@
 		E7A3AEBFCCBF96623DA2ED64F464690D /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F4C4ACF22615ED07A5129021A74E26E6 /* Classes */,
+				98FDBD1EA1E1037DF6FE43404E8E7BAE /* Classes */,
 			);
-			name = Pod;
 			path = Pod;
-			sourceTree = "<group>";
-		};
-		F4C4ACF22615ED07A5129021A74E26E6 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				8BB09B091C8E7C13F21006FD12C1AFE5 /* AKStompClient.swift */,
-			);
-			name = Classes;
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,7 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0F735061E2E7C56BF029AD9EED4004C /* Build configuration list for PBXNativeTarget "EIDStompClient" */;
 			buildPhases = (
-				70319BFBBC75ACEA823CE5EDA40CE791 /* Sources */,
+				6CAA711C66E5E9ADD21D68AC4008FB0D /* Sources */,
 				18A2DC648F7C5C91209F40CB5A26FD4B /* Frameworks */,
 				C24D36484B9CCE26C91A44EB4EB3DEDF /* Headers */,
 			);
@@ -391,12 +388,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70319BFBBC75ACEA823CE5EDA40CE791 /* Sources */ = {
+		6CAA711C66E5E9ADD21D68AC4008FB0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D177C05426E38F4C771F24F78A0275C /* AKStompClient.swift in Sources */,
-				54E800BC9F6B52AE7EB5DB0813057C0A /* EIDStompClient-dummy.m in Sources */,
+				F1389357CB19C714E14EEE45A3BA7A87 /* EIDStompClient-dummy.m in Sources */,
+				F3F13987821C423AC86236B3562ED589 /* AKStompClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

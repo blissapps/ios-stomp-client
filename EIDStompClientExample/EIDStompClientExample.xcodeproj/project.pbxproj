@@ -123,7 +123,7 @@
 				TargetAttributes = {
 					E9D5A8361ECC41F100524F14 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TRZUY52274;
+						DevelopmentTeam = U6EWGWQRAY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -339,7 +339,7 @@
 			baseConfigurationReference = A9F5989B448A7F32F0B1FC8F /* Pods-EIDStompClientExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TRZUY52274;
+				DEVELOPMENT_TEAM = U6EWGWQRAY;
 				INFOPLIST_FILE = EIDStompClientExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -354,7 +354,7 @@
 			baseConfigurationReference = 2F7CAA3EF981ABCF3ACC78EC /* Pods-EIDStompClientExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TRZUY52274;
+				DEVELOPMENT_TEAM = U6EWGWQRAY;
 				INFOPLIST_FILE = EIDStompClientExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

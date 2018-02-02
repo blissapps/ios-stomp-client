@@ -36,7 +36,7 @@ struct StompCommands {
     static let commandHeaderDisconnected = "disconnected"
     static let commandHeaderHeartBeat = "heart-beat"
     static let commandHeaderAcceptVersion = "accept-version"
-
+    
     static let responseHeaderSession = "session"
     static let responseHeaderReceiptId = "receipt-id"
     static let responseHeaderErrorMessage = "message"
@@ -47,29 +47,28 @@ struct StompCommands {
     static let responseFrameError = "ERROR"
 }
 
-public enum EIDStompAckMode {
+public enum AKStompAckMode {
     case autoMode
     case clientMode
 }
 
-public protocol EIDStompClientDelegate {
+public protocol AKStompClientDelegate {
     
-    func stompClient(_ client: EIDStompClient!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, withHeader header:[String:String]?, withDestination destination: String)
+    func stompClient(_ client: AKStompClient!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, withHeader header:[String:String]?, withDestination destination: String)
     
-    func stompClientDidDisconnect(_ client: EIDStompClient!)
-    func stompClientWillDisconnect(_ client: EIDStompClient!, withError error: NSError)
-    func stompClientDidConnect(_ client: EIDStompClient!)
-    func serverDidSendReceipt(_ client: EIDStompClient!, withReceiptId receiptId: String)
-    func serverDidSendError(_ client: EIDStompClient!, withErrorMessage description: String, detailedErrorMessage message: String?)
-    func serverDidSendPing()
+    func stompClientDidDisconnect(_ client: AKStompClient!)
+    func stompClientWillDisconnect(_ client: AKStompClient!, withError error: NSError)
+    func stompClientDidConnect(_ client: AKStompClient!)
+    func serverDidSendReceipt(_ client: AKStompClient!, withReceiptId receiptId: String)
+    func serverDidSendError(_ client: AKStompClient!, withErrorMessage description: String, detailedErrorMessage message: String?)
 }
 
-open class EIDStompClient: NSObject, SRWebSocketDelegate {
-
-
+open class AKStompClient: NSObject, SRWebSocketDelegate {
+    
+    
     public var socket: SRWebSocket?
     var sessionId: String?
-    var delegate: EIDStompClientDelegate?
+    var delegate: AKStompClientDelegate?
     var connectionHeaders: [String: String]?
     open var certificateCheckEnabled = true
     var maxWebSocketFrameSize = 12000
@@ -88,14 +87,14 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
         }
     }
     
-    open func openSocketWithURLRequest(_ request: URLRequest, delegate: EIDStompClientDelegate) {
+    open func openSocketWithURLRequest(_ request: URLRequest, delegate: AKStompClientDelegate) {
         self.delegate = delegate
         self.urlRequest = request
         
         openSocket()
     }
     
-    open func openSocketWithURLRequest(_ request: URLRequest, delegate: EIDStompClientDelegate, connectionHeaders: [String: String]?) {
+    open func openSocketWithURLRequest(_ request: URLRequest, delegate: AKStompClientDelegate, connectionHeaders: [String: String]?) {
         self.connectionHeaders = connectionHeaders
         openSocketWithURLRequest(request, delegate: delegate)
     }
@@ -107,7 +106,7 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
             } else {
                 self.socket = SRWebSocket(urlRequest: urlRequest, protocols: [], allowsUntrustedSSLCertificates: true)
             }
-
+            
             socket!.delegate = self
             socket!.open()
         }
@@ -122,9 +121,8 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
         }
     }
     
-    
     open func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
-//        print("didReceiveMessage")
+        //        print("didReceiveMessage")
         
         func processString(_ string: String) {
             var contents = string.components(separatedBy: "\n")
@@ -172,31 +170,27 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
     }
     
     open func webSocketDidOpen(_ webSocket: SRWebSocket!) {
-        print("webSocketDidOpen")
+        //print("webSocketDidOpen")
         connect()
     }
     
     open func webSocket(_ webSocket: SRWebSocket!, didFailWithError error: Error!) {
-        print("didFailWithError: \(error)")
+        //print("didFailWithError: \(error)")
         
         if let delegate = delegate {
-            DispatchQueue.main.async(execute: {
-                delegate.serverDidSendError(self, withErrorMessage: "Fail Error.", detailedErrorMessage: error.localizedDescription)
-            })
+            delegate.serverDidSendError(self, withErrorMessage: "Fail Error.", detailedErrorMessage: error.localizedDescription)
         }
     }
     
     open func webSocket(_ webSocket: SRWebSocket!, didCloseWithCode code: Int, reason: String!, wasClean: Bool) {
-        print("didCloseWithCode \(code), reason: \(reason)")
+        //print("didCloseWithCode \(code), reason: \(reason)")
         if let delegate = delegate {
-            DispatchQueue.main.async(execute: {
-                delegate.stompClientDidDisconnect(self)
-            })
+            delegate.stompClientDidDisconnect(self)
         }
     }
     
     open func webSocket(_ webSocket: SRWebSocket!, didReceivePong pongPayload: Data!) {
-        print("didReceivePong")
+        //print("didReceivePong")
     }
     
     fileprivate func sendFrame(_ command: String?, header: [String: String]?, body: AnyObject?) {
@@ -229,34 +223,27 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
             frameString += StompCommands.controlChar
             
             if socket?.readyState == .OPEN {
-            
-                    //                socket?.send(frameString)
+                //                socket?.send(frameString)
+                //                var frameNSString = NSString(string: frameString)
+                while true {
                     
-                    //                var frameNSString = NSString(string: frameString)
-                    while true {
-                        
-                        if frameString.characters.count > self.maxWebSocketFrameSize {
-                            //                        socket!.send(frameNSString.substringToIndex(self.maxWebSocketFrameSize))
-                            //                        frameNSString = frameNSString.substringFromIndex(self.maxWebSocketFrameSize)
-                            
-                            let index = frameString.index(frameString.startIndex, offsetBy: self.maxWebSocketFrameSize)
-//                            let index: String.Index = frameString.startIndex.advanced(by: self.maxWebSocketFrameSize)
-                            socket!.send(frameString.substring(to: index))
-                            frameString = frameString.substring(from: index)
-                            
-                            
-                        } else {
-                            socket!.send(frameString)
-                            break
-                        }
-                        
+                    if frameString.count > self.maxWebSocketFrameSize {
+                        //                        socket!.send(frameNSString.substringToIndex(self.maxWebSocketFrameSize))
+                        //                        frameNSString = frameNSString.substringFromIndex(self.maxWebSocketFrameSize)
+                        let index = frameString.index(frameString.startIndex, offsetBy: self.maxWebSocketFrameSize)
+                        //                            let index: String.Index = frameString.startIndex.advanced(by: self.maxWebSocketFrameSize)
+                        socket!.send(frameString.substring(to: index))
+                        frameString = frameString.substring(from: index)
+                    } else {
+                        socket!.send(frameString)
+                        break
                     }
+                    
+                }
             } else {
-                print("no socket connection")
+                //print("no socket connection")
                 if let delegate = delegate {
-                    DispatchQueue.main.async(execute: {
-                        delegate.stompClientDidDisconnect(self)
-                    })
+                    delegate.stompClientDidDisconnect(self)
                 }
             }
         }
@@ -294,48 +281,31 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
             }
             
             if let delegate = delegate {
-                DispatchQueue.main.async(execute: {
-                    delegate.stompClientDidConnect(self)
-                })
+                delegate.stompClientDidConnect(self)
             }
         } else if command == StompCommands.responseFrameMessage {
             // Resonse
-
+            
             if headers["content-type"]?.lowercased().range(of: "application/json") != nil {
                 if let delegate = delegate {
-                    DispatchQueue.main.async(execute: {
-                        delegate.stompClient(self, didReceiveMessageWithJSONBody: self.dictForJSONString(body), withHeader: headers, withDestination: self.destinationFromHeader(headers))
-                    })
+                    delegate.stompClient(self, didReceiveMessageWithJSONBody: self.dictForJSONString(body), withHeader: headers, withDestination: self.destinationFromHeader(headers))
                 }
             } else {
                 // TODO: send binary data back
             }
         } else if command == StompCommands.responseFrameReceipt {
             // Receipt
-            if let delegate = delegate {
-                if let receiptId = headers[StompCommands.responseHeaderReceiptId] {
-                    DispatchQueue.main.async(execute: {
-                        delegate.serverDidSendReceipt(self, withReceiptId: receiptId)
-                    })
-                }
+            if let delegate = delegate, let receiptId = headers[StompCommands.responseHeaderReceiptId] {
+                delegate.serverDidSendReceipt(self, withReceiptId: receiptId)
             }
-        } else if command.characters.count == 0 {
-            // Pong from the server
+        } else if command.count == 0 {
+            // pong to the server
             socket?.send(StompCommands.commandPing)
             
-            if let delegate = delegate {
-                DispatchQueue.main.async(execute: {
-                    delegate.serverDidSendPing()
-                })
-            }
         } else if command == StompCommands.responseFrameError {
             // Error
-            if let delegate = delegate {
-                if let msg = headers[StompCommands.responseHeaderErrorMessage] {
-                    DispatchQueue.main.async(execute: {
-                        delegate.serverDidSendError(self, withErrorMessage: msg, detailedErrorMessage: body)
-                    })
-                }
+            if let delegate = delegate, let msg = headers[StompCommands.responseHeaderErrorMessage] {
+                delegate.serverDidSendError(self, withErrorMessage: msg, detailedErrorMessage: body)
             }
         }
     }
@@ -369,10 +339,10 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
         subscribeToDestination(destination, withAck: .autoMode)
     }
     
-    open func subscribeToDestination(_ destination: String, withAck ackMode: EIDStompAckMode) {
+    open func subscribeToDestination(_ destination: String, withAck ackMode: AKStompAckMode) {
         var ack = ""
         switch ackMode {
-        case EIDStompAckMode.clientMode:
+        case .clientMode:
             ack = StompCommands.ackClient
             break
         default:
@@ -396,13 +366,13 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
         headerToSend[StompCommands.commandHeaderDestinationId] = destination
         sendFrame(StompCommands.commandUnsubscribe, header: headerToSend, body: nil)
     }
-
+    
     open func begin(_ transactionId: String) {
         var headerToSend = [String: String]()
         headerToSend[StompCommands.commandHeaderTransaction] = transactionId
         sendFrame(StompCommands.commandBegin, header: headerToSend, body: nil)
     }
-
+    
     open func commit(_ transactionId: String) {
         var headerToSend = [String: String]()
         headerToSend[StompCommands.commandHeaderTransaction] = transactionId
@@ -420,7 +390,7 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
         headerToSend[StompCommands.commandHeaderMessageId] = messageId
         sendFrame(StompCommands.commandAck, header: headerToSend, body: nil)
     }
-
+    
     open func ack(_ messageId: String, withSubscription subscription: String) {
         var headerToSend = [String: String]()
         headerToSend[StompCommands.commandHeaderMessageId] = messageId
@@ -434,3 +404,4 @@ open class EIDStompClient: NSObject, SRWebSocketDelegate {
         sendFrame(StompCommands.commandDisconnect, header: headerToSend, body: nil)
     }
 }
+
