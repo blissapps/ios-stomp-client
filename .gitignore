@@ -23,3 +23,6 @@ profile
 DerivedData
 extern/
 *.pyc
+
+Carthage/Checkouts
+Carthage/Build
