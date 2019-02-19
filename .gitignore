@@ -16,7 +16,6 @@ xcuserdata/
 !default.perspectivev3
 *.xcworkspace
 !default.xcworkspace
-*xcuserdata
 *.xccheckout
 profile
 *.moved-aside
